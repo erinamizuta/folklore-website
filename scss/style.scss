@@ -1,0 +1,368 @@
+@import "utilities/mapas";
+@import "utilities/mixin";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.menu{
+    background-color: map-get($map: $estilos, $key: colorPrincipal);
+    font-family: map-get($map: $estilos, $key: fontDos);
+    ul li{
+        margin: 10px 5px 10px 5px;
+        font-size: 1.4rem;
+    }
+    ul li:hover{
+        transform: scale(0.9);
+    }
+}
+
+section{
+    h1{
+        @include encabezadoUno;
+    }
+    p{
+        @include parrafo;
+        margin: 2rem;
+    }
+}
+
+.contenidoInicio{
+    .img{
+        @include gridHome;
+        .imgH{
+            width: 80%;
+            margin: 20px auto;
+        }
+    }
+    h2{
+        @include encabezadoDos;
+        margin: 4rem auto;
+        .link{
+            color: map-get($map: $estilos, $key:colorPrincipal );
+            text-decoration: none;
+        }
+        .logoSpotify{
+            width: 3%;
+        }
+    }
+    h2:hover{
+        transform: scale(0.9);
+    }
+
+    .flexHome{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+        margin: 4rem;
+        p{
+            @include parrafo;
+            margin: 1rem 6rem;
+        }
+        .imgPortada{
+            width: 50%;
+        }
+    }
+}
+
+/*sobre el album*/
+
+section{
+    h1{
+        @include encabezadoUno;
+    }
+
+    .parrafoAlbum{
+        @include parrafo;
+        margin: 1.3rem 10rem;
+    }
+    .imgAl{
+        margin: 4rem 0rem;
+        text-align: center;
+        .imgAlbum{
+            width: 70%;
+            margin-bottom: 2rem
+        }
+    }
+}
+
+.contenidoAlbum{
+    @include gridSidebarDos;
+
+    .contenidoMain{
+        margin-left: 5rem;
+        p{
+            @include parrafo;
+
+        }
+
+        .imgAl{
+            margin: 5rem;
+            text-align: center;
+            .imgAlbum{
+                width: 80%;
+            }
+        }
+        .flexImg{
+            display: flex;
+            justify-content: center;
+            margin: 2.5rem 10rem;
+            .imgP{
+                width: 50%;
+                margin: 0 2rem;
+            }
+        }
+
+        h2{
+            @include encabezadoDos;
+            color: map-get($map: $estilos, $key: colorPrincipal);
+            margin: 5rem;
+        }
+        .subtituloDos{
+            @include encabezadoTres;
+
+        }
+        .parrafoAlbum{
+            margin: 2rem 8rem;
+        }
+    
+    }
+    aside{
+        .sidebar{
+            @include sidebar;
+            background-color: rgb(219, 199, 182);
+            h2{
+                @include encabezadoDos;
+                font-size: 1.5rem;
+                margin: 1rem 0;
+            }
+            .pSidebar{
+                @include parrafo;
+                @include pSidebar;
+        
+            }
+        }
+        .sidebarDos{
+            height: 550px;
+            margin: 2rem 3rem 2rem 0;
+        }
+    }
+}
+
+/*multimedia*/
+.contenidoMultimedia{
+    h1{
+        @include encabezadoUno;
+    }
+    h2{
+        @include encabezadoDos;
+        color: map-get($map: $estilos, $key: colorSecundario);
+        margin: 2rem 0;
+    }
+    .imgMultimedia{
+        @include gridMultimedia;
+    }
+    
+    .imgMulti1{
+        grid-area: imgMulti1;
+        @include estilosMultimedia;
+    }
+    .imgMulti2{
+        grid-area: imgMulti2;
+        @include estilosMultimedia;
+    }
+    .imgMulti3{
+        grid-area: imgMulti3;
+        @include estilosMultimedia;
+    }
+    .imgMulti4{
+        grid-area: imgMulti4;
+        @include estilosMultimedia;
+    }
+    .imgMulti5{
+        grid-area: imgMulti5;
+        @include estilosMultimedia;
+    }
+    .imgMulti6{
+        grid-area: imgMulti6;
+        @include estilosMultimedia;
+    }
+    .imgMulti7{
+        grid-area: imgMulti7;
+        @include estilosMultimedia;
+    }
+    .imgMulti8{
+        grid-area: imgMulti8;
+        @include estilosMultimedia;
+    }
+    .imgMulti9{
+        grid-area: imgMulti9;
+        @include estilosMultimedia;
+    }
+    
+
+
+}
+
+/*sobre el autor*/
+
+section{
+    h1{
+        @include encabezadoUno;
+    }
+    p{
+        @include parrafo;
+        margin: 2.5rem 10rem;
+    }
+}
+
+.mainAutor{
+    @include gridSidebar;
+    h2{
+        @include encabezadoDos;
+        color: map-get($map: $estilos, $key: colorSecundario );
+    }
+
+    .discFlex{
+        display: flex; 
+        justify-content: center;
+        margin: 3rem 0 3rem 6rem;
+        justify-content: center;
+        p{
+            @include parrafo;
+            margin: 0 2.5rem;
+            justify-content: center;
+            .link{
+                text-decoration: none;
+                color: gray;
+                font-weight: bold
+            }
+            .link:hover{
+                color: rgb(63, 63, 63);
+            }
+        }
+        
+        .tituloAl{
+            @include titulos;
+            margin: 2rem auto;
+            color: map-get($map: $estilos, $key: colorPrincipal);
+            .logoSpotify{
+                width: 7%;
+            }
+        }
+        .logoSpotify:hover {
+            transform: scale(0.9);
+        }
+        
+        
+    }
+
+    .imgDisc{
+        width: 40%;
+        margin: 1rem auto;
+    }
+
+
+    .sidebar{
+        @include sidebar;
+        .imgPortrato{
+            width: 40%;
+            display: block;
+            margin: 0.5rem auto;
+        }
+        h2{
+            @include encabezadoDos;
+            color: rgb(88, 87, 87);
+            font-size: 1.5rem;
+            margin: 0 auto;
+            font-family: map-get($map: $estilos, $key: fontDos);
+        }
+        p{
+            @include parrafo;
+            @include pSidebar;
+            margin-bottom: 1rem;
+        }
+        .imgSide{
+            width: 85%;
+            display: block;
+            margin: 0.5rem auto;
+        }
+        
+    }
+    .sidebarDos{
+        @include sidebar;
+        p{
+            @include parrafo;
+            @include pSidebar;
+        }
+    }
+}
+
+/*long pond studio*/
+
+section{
+    h1{
+        @include encabezadoUno;
+            margin: 4.5rem 10rem;
+    }
+}
+
+.mainLong{
+    @include gridSidebar; 
+    .contenidoLong{
+        p{
+            @include parrafo;
+            margin: 0rem 5rem;
+        }
+        .imgLong{
+            display: block;
+            margin: 2rem auto;
+            text-align: center;
+            .imgLP{
+                width: 40%;
+            }
+        }
+    }
+    aside{
+        .sidebarLong{
+            padding: 1.3rem;
+            margin-right: 3rem;
+            height: 800px;
+            border: solid rgb(230, 220, 212) 0.5px;
+            border-radius: 8px; 
+            .imgSideLong{
+                width: 90%;
+                display: block;
+                margin: 1.5rem auto;
+                
+            }
+            h3{
+                @include encabezadoTres;
+                font-size: 1.2rem;
+                .link{
+                    font-family: map-get($map: $estilos, $key: fontDos );
+                    text-decoration: none;
+                    color: gray;
+                }
+            }
+            h3:hover{
+                transform: scale(0.9);
+            }
+        }
+    }
+    
+}
+
+footer{
+    h3{
+        background-color: map-get($map: $estilos, $key: colorPrincipal);
+        color: white;
+        font-size: 1rem;
+        text-align: center;
+        font-family: map-get($map: $estilos, $key: font);
+        padding: 2rem;
+        font-weight: bold;
+    }
+}

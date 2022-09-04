@@ -1,0 +1,395 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.menu {
+  background-color: #c6a992;
+  font-family: "IM Fell DW Pica", serif; }
+  .menu ul li {
+    margin: 10px 5px 10px 5px;
+    font-size: 1.4rem; }
+  .menu ul li:hover {
+    transform: scale(0.9); }
+
+section h1 {
+  font-family: 'IM Fell DW Pica', serif;
+  color: #c6a992;
+  font-size: 4.2rem;
+  text-align: center;
+  margin-top: 3rem; }
+
+section p {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.1rem;
+  color: gray;
+  line-height: 1.5rem;
+  margin: 2rem; }
+
+.contenidoInicio .img {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: 1fr;
+  justify-content: center;
+  justify-items: center;
+  align-items: center; }
+  .contenidoInicio .img .imgH {
+    width: 80%;
+    margin: 20px auto; }
+
+.contenidoInicio h2 {
+  text-align: center;
+  font-family: 'IM Fell DW Pica', serif;
+  font-size: 2.7rem;
+  margin: 4rem auto; }
+  .contenidoInicio h2 .link {
+    color: #c6a992;
+    text-decoration: none; }
+  .contenidoInicio h2 .logoSpotify {
+    width: 3%; }
+
+.contenidoInicio h2:hover {
+  transform: scale(0.9); }
+
+.contenidoInicio .flexHome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  margin: 4rem; }
+  .contenidoInicio .flexHome p {
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.1rem;
+    color: gray;
+    line-height: 1.5rem;
+    margin: 1rem 6rem; }
+  .contenidoInicio .flexHome .imgPortada {
+    width: 50%; }
+
+/*sobre el album*/
+section h1 {
+  font-family: 'IM Fell DW Pica', serif;
+  color: #c6a992;
+  font-size: 4.2rem;
+  text-align: center;
+  margin-top: 3rem; }
+
+section .parrafoAlbum {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.1rem;
+  color: gray;
+  line-height: 1.5rem;
+  margin: 1.3rem 10rem; }
+
+section .imgAl {
+  margin: 4rem 0rem;
+  text-align: center; }
+  section .imgAl .imgAlbum {
+    width: 70%;
+    margin-bottom: 2rem; }
+
+.contenidoAlbum {
+  display: grid;
+  grid-template-columns: 2fr 350px;
+  grid-template-rows: auto auto auto;
+  margin: 2rem auto;
+  grid-gap: 5rem; }
+  .contenidoAlbum .contenidoMain {
+    margin-left: 5rem; }
+    .contenidoAlbum .contenidoMain p {
+      text-align: center;
+      font-family: "Open Sans", sans-serif;
+      font-size: 1.1rem;
+      color: gray;
+      line-height: 1.5rem; }
+    .contenidoAlbum .contenidoMain .imgAl {
+      margin: 5rem;
+      text-align: center; }
+      .contenidoAlbum .contenidoMain .imgAl .imgAlbum {
+        width: 80%; }
+    .contenidoAlbum .contenidoMain .flexImg {
+      display: flex;
+      justify-content: center;
+      margin: 2.5rem 10rem; }
+      .contenidoAlbum .contenidoMain .flexImg .imgP {
+        width: 50%;
+        margin: 0 2rem; }
+    .contenidoAlbum .contenidoMain h2 {
+      text-align: center;
+      font-family: 'IM Fell DW Pica', serif;
+      font-size: 2.7rem;
+      color: #c6a992;
+      margin: 5rem; }
+    .contenidoAlbum .contenidoMain .subtituloDos {
+      text-align: center;
+      font-family: 'IM Fell DW Pica', serif;
+      font-size: 2.3rem;
+      color: gray; }
+    .contenidoAlbum .contenidoMain .parrafoAlbum {
+      margin: 2rem 8rem; }
+  .contenidoAlbum aside .sidebar {
+    padding: 1.3rem;
+    margin-right: 3rem;
+    height: 600px;
+    background-color: #dbc7b6;
+    border: solid #dbc7b6 0.5px;
+    border-radius: 8px;
+    background-color: #dbc7b6; }
+    .contenidoAlbum aside .sidebar h2 {
+      text-align: center;
+      font-family: 'IM Fell DW Pica', serif;
+      font-size: 2.7rem;
+      font-size: 1.5rem;
+      margin: 1rem 0; }
+    .contenidoAlbum aside .sidebar .pSidebar {
+      text-align: center;
+      font-family: "Open Sans", sans-serif;
+      font-size: 1.1rem;
+      color: gray;
+      line-height: 1.5rem;
+      color: black;
+      font-family: "IM Fell DW Pica", serif;
+      margin: 0 auto; }
+  .contenidoAlbum aside .sidebarDos {
+    height: 550px;
+    margin: 2rem 3rem 2rem 0; }
+
+/*multimedia*/
+.contenidoMultimedia h1 {
+  font-family: 'IM Fell DW Pica', serif;
+  color: #c6a992;
+  font-size: 4.2rem;
+  text-align: center;
+  margin-top: 3rem; }
+
+.contenidoMultimedia h2 {
+  text-align: center;
+  font-family: 'IM Fell DW Pica', serif;
+  font-size: 2.7rem;
+  color: gray;
+  margin: 2rem 0; }
+
+.contenidoMultimedia .imgMultimedia {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "imgMulti1 imgMulti2 imgMulti3" "imgMulti4 imgMulti5 imgMulti6" "imgMulti7 imgMulti8 imgMulti9";
+  justify-content: center;
+  align-items: center; }
+
+.contenidoMultimedia .imgMulti1 {
+  grid-area: imgMulti1;
+  margin: 3rem auto;
+  width: 80%; }
+
+.contenidoMultimedia .imgMulti2 {
+  grid-area: imgMulti2;
+  margin: 3rem auto;
+  width: 80%; }
+
+.contenidoMultimedia .imgMulti3 {
+  grid-area: imgMulti3;
+  margin: 3rem auto;
+  width: 80%; }
+
+.contenidoMultimedia .imgMulti4 {
+  grid-area: imgMulti4;
+  margin: 3rem auto;
+  width: 80%; }
+
+.contenidoMultimedia .imgMulti5 {
+  grid-area: imgMulti5;
+  margin: 3rem auto;
+  width: 80%; }
+
+.contenidoMultimedia .imgMulti6 {
+  grid-area: imgMulti6;
+  margin: 3rem auto;
+  width: 80%; }
+
+.contenidoMultimedia .imgMulti7 {
+  grid-area: imgMulti7;
+  margin: 3rem auto;
+  width: 80%; }
+
+.contenidoMultimedia .imgMulti8 {
+  grid-area: imgMulti8;
+  margin: 3rem auto;
+  width: 80%; }
+
+.contenidoMultimedia .imgMulti9 {
+  grid-area: imgMulti9;
+  margin: 3rem auto;
+  width: 80%; }
+
+/*sobre el autor*/
+section h1 {
+  font-family: 'IM Fell DW Pica', serif;
+  color: #c6a992;
+  font-size: 4.2rem;
+  text-align: center;
+  margin-top: 3rem; }
+
+section p {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.1rem;
+  color: gray;
+  line-height: 1.5rem;
+  margin: 2.5rem 10rem; }
+
+.mainAutor {
+  display: grid;
+  grid-template-columns: 2fr 350px;
+  grid-template-rows: auto auto auto auto;
+  margin: 2rem auto;
+  grid-gap: 5rem; }
+  .mainAutor h2 {
+    text-align: center;
+    font-family: 'IM Fell DW Pica', serif;
+    font-size: 2.7rem;
+    color: gray; }
+  .mainAutor .discFlex {
+    display: flex;
+    justify-content: center;
+    margin: 3rem 0 3rem 6rem;
+    justify-content: center; }
+    .mainAutor .discFlex p {
+      text-align: center;
+      font-family: "Open Sans", sans-serif;
+      font-size: 1.1rem;
+      color: gray;
+      line-height: 1.5rem;
+      margin: 0 2.5rem;
+      justify-content: center; }
+      .mainAutor .discFlex p .link {
+        text-decoration: none;
+        color: gray;
+        font-weight: bold; }
+      .mainAutor .discFlex p .link:hover {
+        color: #3f3f3f; }
+    .mainAutor .discFlex .tituloAl {
+      font-family: 'Antonio', sans-serif;
+      text-align: center;
+      font-size: 2.5rem;
+      margin: 2rem auto;
+      color: #c6a992; }
+      .mainAutor .discFlex .tituloAl .logoSpotify {
+        width: 7%; }
+    .mainAutor .discFlex .logoSpotify:hover {
+      transform: scale(0.9); }
+  .mainAutor .imgDisc {
+    width: 40%;
+    margin: 1rem auto; }
+  .mainAutor .sidebar {
+    padding: 1.3rem;
+    margin-right: 3rem;
+    height: 600px;
+    background-color: #dbc7b6;
+    border: solid #dbc7b6 0.5px;
+    border-radius: 8px; }
+    .mainAutor .sidebar .imgPortrato {
+      width: 40%;
+      display: block;
+      margin: 0.5rem auto; }
+    .mainAutor .sidebar h2 {
+      text-align: center;
+      font-family: 'IM Fell DW Pica', serif;
+      font-size: 2.7rem;
+      color: #585757;
+      font-size: 1.5rem;
+      margin: 0 auto;
+      font-family: "IM Fell DW Pica", serif; }
+    .mainAutor .sidebar p {
+      text-align: center;
+      font-family: "Open Sans", sans-serif;
+      font-size: 1.1rem;
+      color: gray;
+      line-height: 1.5rem;
+      color: black;
+      font-family: "IM Fell DW Pica", serif;
+      margin: 0 auto;
+      margin-bottom: 1rem; }
+    .mainAutor .sidebar .imgSide {
+      width: 85%;
+      display: block;
+      margin: 0.5rem auto; }
+  .mainAutor .sidebarDos {
+    padding: 1.3rem;
+    margin-right: 3rem;
+    height: 600px;
+    background-color: #dbc7b6;
+    border: solid #dbc7b6 0.5px;
+    border-radius: 8px; }
+    .mainAutor .sidebarDos p {
+      text-align: center;
+      font-family: "Open Sans", sans-serif;
+      font-size: 1.1rem;
+      color: gray;
+      line-height: 1.5rem;
+      color: black;
+      font-family: "IM Fell DW Pica", serif;
+      margin: 0 auto; }
+
+/*long pond studio*/
+section h1 {
+  font-family: 'IM Fell DW Pica', serif;
+  color: #c6a992;
+  font-size: 4.2rem;
+  text-align: center;
+  margin-top: 3rem;
+  margin: 4.5rem 10rem; }
+
+.mainLong {
+  display: grid;
+  grid-template-columns: 2fr 350px;
+  grid-template-rows: auto auto auto auto;
+  margin: 2rem auto;
+  grid-gap: 5rem; }
+  .mainLong .contenidoLong p {
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.1rem;
+    color: gray;
+    line-height: 1.5rem;
+    margin: 0rem 5rem; }
+  .mainLong .contenidoLong .imgLong {
+    display: block;
+    margin: 2rem auto;
+    text-align: center; }
+    .mainLong .contenidoLong .imgLong .imgLP {
+      width: 40%; }
+  .mainLong aside .sidebarLong {
+    padding: 1.3rem;
+    margin-right: 3rem;
+    height: 800px;
+    border: solid #e6dcd4 0.5px;
+    border-radius: 8px; }
+    .mainLong aside .sidebarLong .imgSideLong {
+      width: 90%;
+      display: block;
+      margin: 1.5rem auto; }
+    .mainLong aside .sidebarLong h3 {
+      text-align: center;
+      font-family: 'IM Fell DW Pica', serif;
+      font-size: 2.3rem;
+      color: gray;
+      font-size: 1.2rem; }
+      .mainLong aside .sidebarLong h3 .link {
+        font-family: "IM Fell DW Pica", serif;
+        text-decoration: none;
+        color: gray; }
+    .mainLong aside .sidebarLong h3:hover {
+      transform: scale(0.9); }
+
+footer h3 {
+  background-color: #c6a992;
+  color: white;
+  font-size: 1rem;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  padding: 2rem;
+  font-weight: bold; }
