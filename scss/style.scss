@@ -64,6 +64,9 @@ section{
         .imgPortada{
             width: 50%;
         }
+        .imgPortadaResponsive{
+            display: none;
+        }
     }
 }
 
@@ -87,17 +90,13 @@ section{
         }
     }
 }
-
 .contenidoAlbum{
-    @include gridSidebarDos;
-
+    @include gridSidebar;
     .contenidoMain{
         margin-left: 5rem;
         p{
             @include parrafo;
-
         }
-
         .imgAl{
             margin: 5rem;
             text-align: center;
@@ -114,7 +113,6 @@ section{
                 margin: 0 2rem;
             }
         }
-
         h2{
             @include encabezadoDos;
             color: map-get($map: $estilos, $key: colorPrincipal);
@@ -122,17 +120,14 @@ section{
         }
         .subtituloDos{
             @include encabezadoTres;
-
         }
         .parrafoAlbum{
             margin: 2rem 8rem;
         }
-    
     }
     aside{
         .sidebar{
             @include sidebar;
-            background-color: rgb(219, 199, 182);
             h2{
                 @include encabezadoDos;
                 font-size: 1.5rem;
@@ -140,13 +135,12 @@ section{
             }
             .pSidebar{
                 @include parrafo;
-                @include pSidebar;
-        
+                @include pSidebar;   
             }
         }
         .sidebarDos{
             height: 550px;
-            margin: 2rem 3rem 2rem 0;
+            margin: 1rem;
         }
     }
 }
@@ -201,9 +195,6 @@ section{
         grid-area: imgMulti9;
         @include estilosMultimedia;
     }
-    
-
-
 }
 
 /*sobre el autor*/
@@ -224,46 +215,44 @@ section{
         @include encabezadoDos;
         color: map-get($map: $estilos, $key: colorSecundario );
     }
-
     .discFlex{
         display: flex; 
         justify-content: center;
         margin: 3rem 0 3rem 6rem;
-        justify-content: center;
-        p{
-            @include parrafo;
-            margin: 0 2.5rem;
-            justify-content: center;
-            .link{
-                text-decoration: none;
-                color: gray;
-                font-weight: bold
-            }
-            .link:hover{
-                color: rgb(63, 63, 63);
-            }
+        .imgDisc{
+            width: 40%;
+            margin: 1rem auto;
         }
-        
-        .tituloAl{
-            @include titulos;
-            margin: 2rem auto;
-            color: map-get($map: $estilos, $key: colorPrincipal);
-            .logoSpotify{
-                width: 7%;
+        .imgDiscResponsive{
+            display: none;
+        }
+        div{
+            p{
+                @include parrafo;
+                margin: 0 2.5rem;
+                justify-content: center;
+                .link{
+                    text-decoration: none;
+                    color: gray;
+                    font-weight: bold
+                }
+                .link:hover{
+                    color: rgb(63, 63, 63);
+                }
             }
-        }
-        .logoSpotify:hover {
-            transform: scale(0.9);
-        }
-        
-        
+            .tituloAl{
+                @include titulos;
+                margin: 2rem auto;
+                color: map-get($map: $estilos, $key: colorPrincipal);
+                .logoSpotify{
+                    width: 7%;
+                }
+            }
+            .logoSpotify:hover {
+                transform: scale(0.9);
+            } 
+        }   
     }
-
-    .imgDisc{
-        width: 40%;
-        margin: 1rem auto;
-    }
-
 
     .sidebar{
         @include sidebar;
@@ -289,14 +278,6 @@ section{
             display: block;
             margin: 0.5rem auto;
         }
-        
-    }
-    .sidebarDos{
-        @include sidebar;
-        p{
-            @include parrafo;
-            @include pSidebar;
-        }
     }
 }
 
@@ -305,7 +286,7 @@ section{
 section{
     h1{
         @include encabezadoUno;
-            margin: 4.5rem 10rem;
+        margin: 4.5rem 10rem;
     }
 }
 
@@ -329,14 +310,12 @@ section{
         .sidebarLong{
             padding: 1.3rem;
             margin-right: 3rem;
-            height: 800px;
             border: solid rgb(230, 220, 212) 0.5px;
-            border-radius: 8px; 
+            border-radius: 3px; 
             .imgSideLong{
                 width: 90%;
                 display: block;
-                margin: 1.5rem auto;
-                
+                margin: 1.5rem auto;           
             }
             h3{
                 @include encabezadoTres;
@@ -352,7 +331,413 @@ section{
             }
         }
     }
-    
+}
+
+
+@media screen and (max-width: 768px) {
+    section{
+        margin: 1rem 2rem;
+        h1{
+            margin: 1.5rem;
+            font-size: 2.8rem;
+        }
+        p{
+            font-size: 1.3rem;
+            margin: 2rem;
+        }
+    }
+    .contenidoInicio{
+        .img{
+            display: block;
+            margin: 1rem auto;
+            .imgH{
+                width: 80%;
+                display: block;
+            }
+        }
+        h2{
+            .logoSpotify{
+                width: 10%;
+            }
+        }
+        .flexHome{
+            display: block;
+            margin: 0 auto;
+            p{
+                font-size: 1.3rem;
+                margin: 2rem;
+            }
+            .imgPortadaResponsive{
+                display: block;
+                width: 80%;
+                margin: 2.3rem auto;
+            }
+            .imgPortada{
+                display: none;
+            }
+        }
+    }
+    /*sobre el album*/
+    .contenidoAlbum{
+        display: block;
+        margin: 0 auto;
+        .contenidoMain{
+            margin: 2rem;
+            .parAlbum{
+                margin: 1rem auto;
+                font-size: 1.3rem;
+            }
+            .imgAl{
+                margin: 0;
+                
+                .imgTexto{
+                    width: 90%;
+                    margin: 0 auto;
+                }
+                .imgAlbum{
+                    width: 98%;
+                    margin-bottom: 1rem;
+
+                }
+            }
+            .flexImg{
+                display: block;
+                margin: 0 auto;
+                .imgP{
+                    width: 95%;
+                    margin: 1rem 0;   
+                }
+            }
+            h2{
+                border-bottom: solid rgb(198, 169, 146) 5px;
+                margin: 2rem;
+            }
+            .subtituloDos{
+                font-size: 2.2rem;
+            }
+            .parrafoAlbum{
+                margin: 2rem ;
+            }
+        }
+    }
+    aside{
+        display: none;
+    }
+    /*multimedia*/ 
+    .contenidoMultimedia{
+        h1{
+            font-size: 2.8rem;
+            margin: 1rem;
+        }
+        h2{
+            font-size: 2.4rem;
+        }
+        .imgMultimedia{
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+        }
+    }
+    /*sobre el autor*/
+    section{
+        margin: 1rem 0;
+        p{
+            margin: 0;
+            padding: 0 4rem;
+        }
+    }
+    .mainAutor{
+        display: block;
+        margin: 0;
+        .discFlex{
+            display: block;
+            margin: 0;
+            .imgDisc{
+                display: none;
+            }
+            .imgDiscResponsive{
+                width: 50%;
+                display: block;
+                margin: 1rem auto;
+                margin-bottom: 4rem;
+            }
+            div{
+                p{
+                    margin:0;
+                    font-size: 1.3rem;
+                    padding: 0 4rem;
+                }
+                .tituloAl{
+                    font-size: 2rem;
+                    margin-bottom: 1.3rem;
+                }
+            }
+        }
+
+    }
+    .sidebar{
+        display: none;
+    }
+    .mainLong{
+        display: block;
+        .contenidoLong{
+            p{
+                margin: 1rem auto;
+                font-size: 1.3rem;
+                padding: 2rem;
+            }
+            .imgLong{
+                .imgLP{
+                    width: 80%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1000px){
+    section{
+        h1{
+            font-size: 3rem;
+        }
+        p{
+            font-size: 1.3rem;
+
+        }
+    }
+    .contenidoInicio{
+        .img{
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-template-rows: 1fr 1fr;
+            justify-content: center;
+            justify-items: center;
+            align-items: center;
+            grid-gap: 1rem;
+            .imgH{
+                width: 80%;
+                
+            }
+        }
+    }
+    .flexHome{
+        p{
+            font-size: 1.3rem;
+        }
+        .imgPortadaResponsive{
+            margin: 2.3rem auto;
+            display: block;
+        }
+        .imgPortada{
+            display: none;
+        }
+    }
+
+    /*sobre el album*/
+
+    section{
+        h1{
+            margin: 2rem;
+        }
+    }
+    .contenidoAlbum{
+        display: block;
+        margin: 0 auto;
+        .contenidoMain{
+            margin: 0 2rem;
+            .parAlbum{
+                margin: 2rem;
+                font-size: 1.3rem;
+               
+            }
+            .imgAl{
+                margin: 1.3rem;
+                
+                .imgTexto{
+                    width: 90%;
+                    margin: 0 auto;
+                }
+                .imgAlbum{
+                    width: 98%;
+                    margin-bottom: 1rem;
+
+                }
+            }
+            .flexImg{
+                display: block;
+                margin: 0 auto;
+                .imgP{
+                    width: 70%;
+                    margin: 1rem auto;
+                    display: block;
+                       
+                }
+            }
+            h2{
+                border-bottom: solid rgb(198, 169, 146) 5px;
+                margin: 2rem;
+            }
+            .subtituloDos{
+                font-size: 2.5rem;
+            }
+            .parrafoAlbum{
+                margin: 2rem;
+                font-size: 1.3rem;
+            }
+        }
+    }
+    /*multimedia*/ 
+    .contenidoMultimedia{
+        h1{
+            font-size: 2.8rem;
+            margin: 1rem;
+        }
+        h2{
+            font-size: 2.4rem;
+        }
+        .imgMultimedia{
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+            width: 70%;
+        }
+    }
+    /*sobre el autor*/
+    .mainAutor{
+        display: block;
+        margin: 0;
+        .discFlex{
+            display: block;
+            margin: 0;
+            .imgDisc{
+                display: none;
+            }
+            .imgDiscResponsive{
+                width: 50%;
+                display: block;
+                margin: 1rem auto;
+                margin-bottom: 4rem;
+            }
+            div{
+                p{
+                    margin:0;
+                    font-size: 1.3rem;
+                    padding: 0 4rem;
+                }
+                .tituloAl{
+                    font-size: 3rem;
+                    margin-bottom: 1.3rem;
+                }
+            }
+        }
+    }
+
+    .mainLong{
+        display: block;
+        .contenidoLong{
+            p{
+                margin: 1rem auto;
+                font-size: 1.3rem;
+                padding: 2rem;
+            }
+            .imgLong{
+                .imgLP{
+                    width: 80%;
+                }
+            }
+        }
+        aside{
+            .sidebarLong{
+                border: none;
+                width: 50%;
+                margin: auto;
+                h3{
+                    font-size: 1.8rem;
+                }
+            }
+        }
+    }
+    aside{
+        .sidebar{
+            display: none;
+        }
+        .sidebarDos{
+            display: none;
+        }
+    }
+}
+
+@media screen and (min-width: 1001px) and (max-width:1200px){
+    /*sobre el album*/
+    .contenidoAlbum{
+        .contenidoMain{
+
+            .imgAl{
+                margin: 2rem;
+                .imgAlbum{
+                    width: 100%;
+                }
+            }
+            .flexImg{
+                margin: 2rem auto;
+                .Imgp{
+                    width: 100%;
+                    margin: 0;
+                }
+            }
+            h2{
+                margin-top: 2.5rem;
+                margin-bottom: 0;
+            }
+            .parrafoAlbum{
+                margin: 2rem 0;
+            }
+        }
+    }
+
+    /*sobre el autor*/
+    .mainAutor{
+        grid-template-columns: 2fr 200px;
+        grid-gap: 0;
+        div{
+            .discFlex{
+                margin: 3rem 1rem;
+                div{
+                    .pDisc{
+                        margin: 0 1rem;
+                    }
+                }
+            }
+        }
+        aside{
+            .sidebar{
+                padding: 0;
+                margin: 1rem;
+                .imgPortrato{
+                    width: 70%;
+                }
+                h2{
+                    font-size: 1.2rem;
+                }
+                .imgSide{
+                    width: 90%;
+                }
+            }
+        }
+    }
+    /*long pond*/
+    .mainLong{
+        .contenidoLong{
+            p{
+                margin: 1rem;
+            }
+            .imgLong{
+                .imgLP{
+                    width: 70%;
+                }
+            }
+        }
+    }
 }
 
 footer{
