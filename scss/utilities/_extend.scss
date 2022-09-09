@@ -1,0 +1,49 @@
+%encabezadoUno{
+    font-family: 'IM Fell DW Pica', serif;
+    color: #c6a992;
+    font-size: 3.6rem;
+    text-align: center;
+    margin: 3rem auto;
+}
+
+%encabezadoDos{
+    text-align: center;
+    font-family: 'IM Fell DW Pica', serif;
+    font-size: 2.7rem;
+}
+
+%parrafos{
+    text-align: center;
+    font-family: map-get($map: $estilos, $key: font);
+    font-size: 1.1rem;
+    color: map-get($map: $estilos, $key: colorSecundario);
+    line-height: 1.5rem;
+}
+
+%encabezadoTres{
+    text-align: center;
+    font-family: 'IM Fell DW Pica', serif;
+    font-size: 2.3rem;
+    color: rgb(128, 128, 128);
+}
+
+%gridSidebar{
+    display: grid;
+    grid-template-columns:2fr 300px;
+    grid-template-rows: auto auto;
+    margin: 2rem auto;
+    grid-gap: 2rem;
+}
+
+%sidebarEstilos{
+    padding: 1.3rem;
+    margin: 1rem;
+    border: solid rgb(230, 220, 212) 0.5px;
+    border-radius: 5px;
+}
+
+%estilosMultimedia{
+    grid-gap: 2rem;
+    margin: 1rem auto;
+    width: 80%; 
+}

@@ -317,7 +317,8 @@ section p {
       margin: 2rem; }
       .contenidoAlbum .contenidoMain div .parAlbum {
         margin: 1rem auto;
-        font-size: 1.3rem; }
+        font-size: 1.3rem;
+        text-align: left; }
       .contenidoAlbum .contenidoMain div .imgAlDos {
         margin: 1.5rem auto; }
         .contenidoAlbum .contenidoMain div .imgAlDos .imgTexto {

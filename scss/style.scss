@@ -1,9 +1,14 @@
 @import "utilities/mapas";
 @import "utilities/mixin";
+@import "utilities/extend";
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6{
+    margin-bottom: 0;
 }
 
 .menu{
@@ -20,24 +25,37 @@
 
 section{
     h1{
-        @include encabezadoUno;
+        @extend %encabezadoUno;
     }
     p{
-        @include parrafo;
-        margin: 2rem;
+        @extend %parrafos;
+        .link{
+            color: map-get($map: $estilos, $key: colorPrincipal);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .link:hover{
+            color: map-get($map: $estilos, $key: colorTercero) ;
+        }
     }
 }
 
 .contenidoInicio{
+    margin: 0 10rem;
     .img{
-        @include gridHome;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
         .imgH{
             width: 80%;
             margin: 20px auto;
         }
     }
     h2{
-        @include encabezadoDos;
+        @extend %encabezadoDos;
         margin: 4rem auto;
         .link{
             color: map-get($map: $estilos, $key:colorPrincipal );
@@ -56,144 +74,164 @@ section{
         justify-content: center;
         align-items: center;
         justify-items: center;
-        margin: 4rem;
-        p{
-            @include parrafo;
-            margin: 1rem 6rem;
-        }
-        .imgPortada{
-            width: 50%;
-        }
-        .imgPortadaResponsive{
-            display: none;
+        margin: 4rem 0;
+        div{
+
+            p{
+                @extend %parrafos;
+                margin-right: 2rem;
+                margin-bottom: 0;
+            }
+            .imgPortada{
+                width: 50%;
+            }
+            .imgPortadaResponsive{
+                display: none;
+            }
         }
     }
 }
 
 /*sobre el album*/
 
-section{
-    h1{
-        @include encabezadoUno;
+.contenidoAlbum{
+    margin: 0 10rem;
+    .contenidoMain{
+        @extend %gridSidebar;
+        div{
+            h1{
+                @extend %encabezadoUno;
+            }
+            p{
+                @extend %parrafos;
+                width: 85%;
+                margin: 0 auto;
+            }
+            .imgAlDos{
+                text-align: center;
+                margin: 3rem 0;
+            }
+            .flexImg{
+                display: flex;
+                justify-content: center;
+                margin: 2.5rem 0rem;
+                .imgP{
+                    width: 40%;
+                    margin: 0 1rem;
+                }
+            }
+        }
+        aside{
+            margin: 10rem 0;
+            .sidebar{
+                @extend %sidebarEstilos;
+                h2{
+                    @extend %encabezadoDos;
+                    color: map-get($map: $estilos, $key: colorTercero);
+                    font-size: 1.5rem;
+                    margin: 1rem 0;
+                }
+                .pSidebar{
+                    @extend %parrafos;
+                    @include pSidebar;   
+                }
+            }
+            .sidebarDos{
+                margin: 1rem;
+            }
+        }
     }
-
+    .subtituloUno{
+        @extend %encabezadoDos;
+        color: map-get($map: $estilos, $key: colorPrincipal);
+        margin: 5rem 0;
+        border-bottom: solid rgb(198, 169, 146) 5px;
+    }
+    .subtituloDos{
+        @extend %encabezadoTres;
+        font-size: 3rem
+    }
     .parrafoAlbum{
-        @include parrafo;
-        margin: 1.3rem 10rem;
+        @extend %parrafos;
+        text-align: center;
+        margin: 2rem auto;
+        width: 70%;
+        span{
+            font-style: italic;
+            color: rgb(99, 80, 65);
+            font-weight: bold;
+            text-align: center;
+        }
     }
     .imgAl{
-        margin: 4rem 0rem;
         text-align: center;
+        margin: 1.5rem 0;
         .imgAlbum{
-            width: 70%;
-            margin-bottom: 2rem
+            width: 60%;
+            margin-bottom: 2.5rem;
         }
     }
-}
-.contenidoAlbum{
-    @include gridSidebar;
-    .contenidoMain{
-        margin-left: 5rem;
-        p{
-            @include parrafo;
-        }
-        .imgAl{
-            margin: 5rem;
-            text-align: center;
-            .imgAlbum{
-                width: 80%;
-            }
-        }
-        .flexImg{
-            display: flex;
-            justify-content: center;
-            margin: 2.5rem 10rem;
-            .imgP{
-                width: 50%;
-                margin: 0 2rem;
-            }
-        }
-        h2{
-            @include encabezadoDos;
-            color: map-get($map: $estilos, $key: colorPrincipal);
-            margin: 5rem;
-        }
-        .subtituloDos{
-            @include encabezadoTres;
-        }
-        .parrafoAlbum{
-            margin: 2rem 8rem;
-        }
-    }
-    aside{
-        .sidebar{
-            @include sidebar;
-            h2{
-                @include encabezadoDos;
-                font-size: 1.5rem;
-                margin: 1rem 0;
-            }
-            .pSidebar{
-                @include parrafo;
-                @include pSidebar;   
-            }
-        }
-        .sidebarDos{
-            height: 550px;
-            margin: 1rem;
-        }
-    }
+    
 }
 
 /*multimedia*/
 .contenidoMultimedia{
+    margin: 0 10rem;
     h1{
-        @include encabezadoUno;
+        @extend %encabezadoUno;
     }
     h2{
-        @include encabezadoDos;
+        @extend %encabezadoDos;
         color: map-get($map: $estilos, $key: colorSecundario);
         margin: 2rem 0;
     }
     .imgMultimedia{
-        @include gridMultimedia;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: 
+                          "imgMulti1 imgMulti2 imgMulti3"
+                          "imgMulti4 imgMulti5 imgMulti6"
+                          "imgMulti7 imgMulti8 imgMulti9";
+        justify-content: center;
+        align-items: center;
     }
     
     .imgMulti1{
         grid-area: imgMulti1;
-        @include estilosMultimedia;
+        @extend %estilosMultimedia;
     }
     .imgMulti2{
         grid-area: imgMulti2;
-        @include estilosMultimedia;
+        @extend %estilosMultimedia;
     }
     .imgMulti3{
         grid-area: imgMulti3;
-        @include estilosMultimedia;
+        @extend %estilosMultimedia;
     }
     .imgMulti4{
         grid-area: imgMulti4;
-        @include estilosMultimedia;
+        @extend %estilosMultimedia;
     }
     .imgMulti5{
         grid-area: imgMulti5;
-        @include estilosMultimedia;
+        @extend %estilosMultimedia;
     }
     .imgMulti6{
         grid-area: imgMulti6;
-        @include estilosMultimedia;
+        @extend %estilosMultimedia;
     }
     .imgMulti7{
         grid-area: imgMulti7;
-        @include estilosMultimedia;
+        @extend %estilosMultimedia;
     }
     .imgMulti8{
         grid-area: imgMulti8;
-        @include estilosMultimedia;
+        @extend %estilosMultimedia;
     }
     .imgMulti9{
         grid-area: imgMulti9;
-        @include estilosMultimedia;
+        @extend %estilosMultimedia;
     }
 }
 
@@ -201,24 +239,25 @@ section{
 
 section{
     h1{
-        @include encabezadoUno;
+        @extend %encabezadoUno;
     }
     p{
-        @include parrafo;
+        @extend %parrafos;
         margin: 2.5rem 10rem;
     }
 }
 
 .mainAutor{
-    @include gridSidebar;
+    @extend %gridSidebar;
+    margin: 0 10rem;
     h2{
-        @include encabezadoDos;
+        @extend %encabezadoDos;
         color: map-get($map: $estilos, $key: colorSecundario );
     }
     .discFlex{
         display: flex; 
         justify-content: center;
-        margin: 3rem 0 3rem 6rem;
+        margin: 3rem 0;
         .imgDisc{
             width: 40%;
             margin: 1rem auto;
@@ -227,10 +266,11 @@ section{
             display: none;
         }
         div{
+            margin: 2rem 2.5rem;
             p{
-                @include parrafo;
-                margin: 0 2.5rem;
+                @extend %parrafos;
                 justify-content: center;
+                margin: 2rem 0;
                 .link{
                     text-decoration: none;
                     color: gray;
@@ -241,8 +281,9 @@ section{
                 }
             }
             .tituloAl{
-                @include titulos;
-                margin: 2rem auto;
+                font-family: 'Antonio', sans-serif;
+                text-align: center;
+                font-size: 2.3rem;
                 color: map-get($map: $estilos, $key: colorPrincipal);
                 .logoSpotify{
                     width: 7%;
@@ -254,76 +295,88 @@ section{
         }   
     }
 
-    .sidebar{
-        @include sidebar;
-        .imgPortrato{
-            width: 40%;
-            display: block;
-            margin: 0.5rem auto;
+    aside{
+        .sidebar{
+            @extend %sidebarEstilos;
+            .imgPortrato{
+                width: 40%;
+                display: block;
+                margin: 0.5rem auto;
+            }
+            h2{
+                @extend %encabezadoDos;
+                color: map-get($map: $estilos, $key: colorTercero);
+                font-size: 1.5rem;
+                margin: 0 auto;
+                font-family: map-get($map: $estilos, $key: fontDos);
+            }
+            p{
+                @extend %parrafos;
+                @include pSidebar;
+                margin-bottom: 1rem;
+            }
+            .imgSide{
+                width: 85%;
+                display: block;
+                margin: 0.5rem auto;
+            }
         }
-        h2{
-            @include encabezadoDos;
-            color: rgb(88, 87, 87);
-            font-size: 1.5rem;
-            margin: 0 auto;
-            font-family: map-get($map: $estilos, $key: fontDos);
-        }
-        p{
-            @include parrafo;
-            @include pSidebar;
-            margin-bottom: 1rem;
-        }
-        .imgSide{
-            width: 85%;
-            display: block;
-            margin: 0.5rem auto;
+        .sidebarDos{
+            margin: 1rem;
+            
+            p{
+                @extend %parrafos;
+                @include pSidebar;
+                font-size: 1.6rem;
+                margin: 3rem 0 1.5rem 0;
+                border-bottom: solid rgb(198, 169, 146) 8px;
+                border-bottom-width: 2px;
+            }
         }
     }
 }
 
 /*long pond studio*/
 
-section{
-    h1{
-        @include encabezadoUno;
-        margin: 4.5rem 10rem;
-    }
-}
-
 .mainLong{
-    @include gridSidebar; 
+    @extend %gridSidebar; 
+    margin: 0 10rem;
     .contenidoLong{
+        h1{
+            @extend %encabezadoUno;
+        }
         p{
-            @include parrafo;
-            margin: 0rem 5rem;
+            @extend %parrafos;
         }
         .imgLong{
             display: block;
             margin: 2rem auto;
             text-align: center;
-            .imgLP{
-                width: 40%;
-            }
+            width: 50%;
+        }
+        .imgLongDos{
+            display: block;
+            margin: 2rem auto;
+            text-align: center;
+            width: 70%;
         }
     }
     aside{
+        margin: 10rem 0;
         .sidebarLong{
-            padding: 1.3rem;
-            margin-right: 3rem;
-            border: solid rgb(230, 220, 212) 0.5px;
-            border-radius: 3px; 
+            @extend %sidebarEstilos;
             .imgSideLong{
                 width: 90%;
                 display: block;
                 margin: 1.5rem auto;           
             }
             h3{
-                @include encabezadoTres;
+                @extend %encabezadoTres;
                 font-size: 1.2rem;
                 .link{
                     font-family: map-get($map: $estilos, $key: fontDos );
                     text-decoration: none;
-                    color: gray;
+                    color: map-get($map: $estilos, $key: colorPrincipal);
                 }
             }
             h3:hover{
@@ -347,6 +400,7 @@ section{
         }
     }
     .contenidoInicio{
+        margin: 1rem 2rem;
         .img{
             display: block;
             margin: 1rem auto;
@@ -362,15 +416,17 @@ section{
         }
         .flexHome{
             display: block;
-            margin: 0 auto;
-            p{
-                font-size: 1.3rem;
-                margin: 2rem;
-            }
-            .imgPortadaResponsive{
-                display: block;
-                width: 80%;
-                margin: 2.3rem auto;
+            div{
+                p{
+                    font-size: 1.3rem;
+                    margin: 0 auto;
+                    text-align: left;
+                }
+                .imgPortadaResponsive{
+                    display: block;
+                    width: 80%;
+                    margin: 2.3rem auto;
+                }
             }
             .imgPortada{
                 display: none;
@@ -382,23 +438,33 @@ section{
         display: block;
         margin: 0 auto;
         .contenidoMain{
+            display: block;
             margin: 2rem;
-            .parAlbum{
-                margin: 1rem auto;
-                font-size: 1.3rem;
-            }
-            .imgAl{
-                margin: 0;
-                
-                .imgTexto{
-                    width: 90%;
+            div{
+                .parAlbum{
+                    margin: 1rem auto;
+                    font-size: 1.3rem;
+                    text-align: left;
+                }
+                .imgAlDos{
+                    margin: 1.5rem auto;
+                    
+                    .imgTexto{
+                        width: 90%;
+                        margin: 0 auto;
+                    }
+                }
+                .flexImg{
+                    display: block;
                     margin: 0 auto;
+                    .imgP{
+                        width: 95%;
+                        margin: 1rem 0;   
+                    }
                 }
-                .imgAlbum{
-                    width: 98%;
-                    margin-bottom: 1rem;
-
-                }
+            }
+            aside{
+                display: none;
             }
             .flexImg{
                 display: block;
@@ -408,23 +474,28 @@ section{
                     margin: 1rem 0;   
                 }
             }
-            h2{
-                border-bottom: solid rgb(198, 169, 146) 5px;
-                margin: 2rem;
-            }
-            .subtituloDos{
-                font-size: 2.2rem;
-            }
-            .parrafoAlbum{
-                margin: 2rem ;
+            
+        }
+        h2{
+            border-bottom: solid rgb(198, 169, 146) 5px;
+            margin: 2rem;
+        }
+        .subtituloDos{
+            font-size: 2.2rem;
+        }
+        .parrafoAlbum{
+            margin: 2rem auto;
+        }
+        .imgAl{
+            margin: 1rem;
+            .imgAlbum{
+                width: 98%;
             }
         }
     }
-    aside{
-        display: none;
-    }
     /*multimedia*/ 
     .contenidoMultimedia{
+        margin: 0 auto;
         h1{
             font-size: 2.8rem;
             margin: 1rem;
@@ -442,8 +513,8 @@ section{
     section{
         margin: 1rem 0;
         p{
-            margin: 0;
-            padding: 0 4rem;
+            margin: 0 1rem;
+            padding: 0;
         }
     }
     .mainAutor{
@@ -456,16 +527,18 @@ section{
                 display: none;
             }
             .imgDiscResponsive{
-                width: 50%;
+                width: 80%;
                 display: block;
                 margin: 1rem auto;
-                margin-bottom: 4rem;
+                margin-bottom: 3rem;
             }
             div{
+                margin: 1rem;
                 p{
                     margin:0;
                     font-size: 1.3rem;
-                    padding: 0 4rem;
+                    padding: 0 1rem;
+                    text-align: left;
                 }
                 .tituloAl{
                     font-size: 2rem;
@@ -473,22 +546,47 @@ section{
                 }
             }
         }
+        aside{
+            .sidebar{
+                display: none;
+           }
+           .sidebarDos{
+                margin: 1rem auto;
+           }
+        }
 
     }
-    .sidebar{
-        display: none;
-    }
+    /*long pond sessions*/
     .mainLong{
         display: block;
+        margin: 1rem auto;
         .contenidoLong{
+            h1{
+                margin: 2rem 3rem;
+                font-size: 3.2rem;
+            }
             p{
-                margin: 1rem auto;
+                margin: 0 auto;
                 font-size: 1.3rem;
                 padding: 2rem;
+                text-align: left;
             }
             .imgLong{
-                .imgLP{
-                    width: 80%;
+                width: 90%;
+            }
+            .imgLongDos{
+                width: 100%;
+                margin: 2rem 0;
+            }
+        }
+        aside{
+            margin: 0 auto;
+            .sidebarLong{
+                margin: 0 auto;
+                border: none;
+                .imgSideLong{
+                    width: 60%;
+                    margin: 1rem auto;
                 }
             }
         }
@@ -497,15 +595,18 @@ section{
 
 @media screen and (min-width: 769px) and (max-width: 1000px){
     section{
+        margin: 1rem 2rem;
         h1{
-            font-size: 3rem;
+            font-size: 3.4rem;
         }
         p{
             font-size: 1.3rem;
+            margin: 2rem;
 
         }
     }
     .contenidoInicio{
+        margin: 1rem 2rem;
         .img{
             display: grid;
             grid-template-columns: auto auto;
@@ -516,20 +617,26 @@ section{
             grid-gap: 1rem;
             .imgH{
                 width: 80%;
-                
             }
         }
-    }
-    .flexHome{
-        p{
-            font-size: 1.3rem;
-        }
-        .imgPortadaResponsive{
-            margin: 2.3rem auto;
+        .flexHome{
             display: block;
-        }
-        .imgPortada{
-            display: none;
+            margin: 0 2rem;
+            div{
+                p{
+                    font-size: 1.3rem;
+                    margin: 0 auto;
+                    text-align: left;
+                }
+                .imgPortadaResponsive{
+                    display: block;
+                    width: 80%;
+                    margin: 2.3rem auto;
+                }
+            }
+            .imgPortada{
+                display: none;
+            }
         }
     }
 
@@ -541,53 +648,54 @@ section{
         }
     }
     .contenidoAlbum{
-        display: block;
         margin: 0 auto;
         .contenidoMain{
-            margin: 0 2rem;
-            .parAlbum{
-                margin: 2rem;
-                font-size: 1.3rem;
-               
-            }
-            .imgAl{
-                margin: 1.3rem;
-                
-                .imgTexto{
-                    width: 90%;
-                    margin: 0 auto;
+            display: block;
+            div{
+                .imgAlDos{
+                    margin: 1.3rem;
+                    
+                    .imgTexto{
+                        width: 70%;
+                        margin: 0 auto;
+                    }
                 }
-                .imgAlbum{
-                    width: 98%;
-                    margin-bottom: 1rem;
-
-                }
-            }
-            .flexImg{
-                display: block;
-                margin: 0 auto;
-                .imgP{
-                    width: 70%;
-                    margin: 1rem auto;
+                .flexImg{
                     display: block;
-                       
+                    margin: 0 auto;
+                    .imgP{
+                        width: 70%;
+                        margin: 1rem auto;
+                        display: block;
+                           
+                    }
                 }
             }
-            h2{
-                border-bottom: solid rgb(198, 169, 146) 5px;
-                margin: 2rem;
-            }
-            .subtituloDos{
-                font-size: 2.5rem;
-            }
-            .parrafoAlbum{
-                margin: 2rem;
-                font-size: 1.3rem;
+            aside{
+                display: none;
             }
         }
+        h2{
+            border-bottom: solid rgb(198, 169, 146) 5px;
+            margin: 2rem;
+        }
+        .subtituloDos{
+            font-size: 2.5rem;
+        }
+        .parrafoAlbum{
+            margin: 2rem auto;
+            font-size: 1.3rem;
+        }
+        .imgAlbum{
+            width: 98%;
+            margin-bottom: 1rem;
+
+        }
     }
+    
     /*multimedia*/ 
     .contenidoMultimedia{
+        margin: 0 auto;
         h1{
             font-size: 2.8rem;
             margin: 1rem;
@@ -630,46 +738,64 @@ section{
                 }
             }
         }
+        aside{
+            margin: 0 auto;
+            .sidebar{
+                display: none;
+            }
+            .sidebarDos{
+                display: block;
+                margin: 1rem auto;
+            }
+        }
     }
-
+    /*long pond sessions*/
     .mainLong{
         display: block;
+        margin: 0 auto;
         .contenidoLong{
+            h1{
+                margin: 2rem 3rem;
+                font-size: 3.2rem;
+            }
             p{
                 margin: 1rem auto;
                 font-size: 1.3rem;
                 padding: 2rem;
             }
-            .imgLong{
-                .imgLP{
-                    width: 80%;
-                }
-            }
         }
         aside{
+            margin: 1rem;
             .sidebarLong{
                 border: none;
                 width: 50%;
-                margin: auto;
+                margin: 0 auto;
+                .imgSideLong{
+                    width: 70%;
+                }
                 h3{
                     font-size: 1.8rem;
                 }
             }
         }
     }
-    aside{
-        .sidebar{
-            display: none;
-        }
-        .sidebarDos{
-            display: none;
-        }
-    }
 }
 
-@media screen and (min-width: 1001px) and (max-width:1200px){
+@media screen and (min-width: 1001px) and (max-width:1350px){
+    section{
+        margin: 1rem 3rem;
+    }
+    .contenidoInicio{
+        margin: 1rem 3rem;
+        .flexHome{
+            .imgPortada{
+                width: 40%;
+            }
+        }
+    }
     /*sobre el album*/
     .contenidoAlbum{
+        margin: 1rem 3rem;
         .contenidoMain{
 
             .imgAl{
@@ -695,14 +821,29 @@ section{
         }
     }
 
+    /*multimedia*/
+    .contenidoMultimedia{
+        margin: 1rem 3rem;
+    }
+
     /*sobre el autor*/
     .mainAutor{
-        grid-template-columns: 2fr 200px;
-        grid-gap: 0;
+        margin: 0 3rem;
         div{
             .discFlex{
-                margin: 3rem 1rem;
+                display: block;
+                margin: 0 auto;
+                .imgDisc{
+                    display: none;
+                }
+                .imgDiscResponsive{
+                    width: 60%;
+                    display: block;
+                    margin: 1rem auto;
+                    margin-bottom: 3rem;
+                }
                 div{
+                    margin: 1rem 0.5rem;
                     .pDisc{
                         margin: 0 1rem;
                     }
@@ -710,9 +851,10 @@ section{
             }
         }
         aside{
+            margin-left: 1rem;
             .sidebar{
                 padding: 0;
-                margin: 1rem;
+                margin: 0;
                 .imgPortrato{
                     width: 70%;
                 }
@@ -723,20 +865,28 @@ section{
                     width: 90%;
                 }
             }
+            .sidebarDos{
+                margin: 0;
+            }
         }
     }
     /*long pond*/
     .mainLong{
+        margin: 0 3rem;
         .contenidoLong{
             p{
                 margin: 1rem;
             }
             .imgLong{
-                .imgLP{
-                    width: 70%;
-                }
+                width: 80%;
             }
         }
+    }
+}
+
+@media screen and (min-width: 1351px) and (max-width: 1600px){
+    .mainAutor{
+        margin: 0 5rem;
     }
 }
 
