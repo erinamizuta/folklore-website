@@ -161,9 +161,7 @@ section p .link:hover {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto auto auto;
-    grid-template-areas: "imgMulti1 imgMulti2 imgMulti3"
- "imgMulti4 imgMulti5 imgMulti6"
- "imgMulti7 imgMulti8 imgMulti9";
+    grid-template-areas: "imgMulti1 imgMulti2 imgMulti3" "imgMulti4 imgMulti5 imgMulti6" "imgMulti7 imgMulti8 imgMulti9";
     justify-content: center;
     align-items: center; }
   .contenidoMultimedia .imgMulti1 {
@@ -408,7 +406,18 @@ section p {
       padding: 2rem;
       text-align: left; }
     .mainLong .contenidoLong .imgLong {
-      width: 90%; } }
+      width: 90%; }
+    .mainLong .contenidoLong .imgLongDos {
+      width: 100%;
+      margin: 2rem 0; }
+    .mainLong aside {
+      margin: 0 auto; }
+      .mainLong aside .sidebarLong {
+        margin: 0 auto;
+        border: none; }
+        .mainLong aside .sidebarLong .imgSideLong {
+          width: 60%;
+          margin: 1rem auto; } }
 
 @media screen and (min-width: 769px) and (max-width: 1000px) {
   section {
@@ -520,6 +529,9 @@ section p {
   .mainLong {
     display: block;
     margin: 0 auto; }
+    .mainLong .contenidoLong h1 {
+      margin: 2rem 3rem;
+      font-size: 3.2rem; }
     .mainLong .contenidoLong p {
       margin: 1rem auto;
       font-size: 1.3rem;
@@ -599,6 +611,10 @@ section p {
       margin: 1rem; }
     .mainLong .contenidoLong .imgLong {
       width: 80%; } }
+
+@media screen and (min-width: 1351px) and (max-width: 1600px) {
+  .mainAutor {
+    margin: 0 5rem; } }
 
 footer h3 {
   background-color: #c6a992;
