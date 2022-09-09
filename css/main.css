@@ -1,7 +1,53 @@
+section h1, .contenidoAlbum .contenidoMain div h1, .contenidoMultimedia h1, .mainLong .contenidoLong h1 {
+  font-family: 'IM Fell DW Pica', serif;
+  color: #c6a992;
+  font-size: 3.6rem;
+  text-align: center;
+  margin: 3rem auto; }
+
+.contenidoInicio h2, .contenidoAlbum .contenidoMain aside .sidebar h2, .contenidoAlbum .subtituloUno, .contenidoMultimedia h2, .mainAutor h2, .mainAutor aside .sidebar h2 {
+  text-align: center;
+  font-family: 'IM Fell DW Pica', serif;
+  font-size: 2.7rem; }
+
+section p, .contenidoInicio .flexHome div p, .contenidoAlbum .contenidoMain div p, .contenidoAlbum .contenidoMain aside .sidebar .pSidebar, .contenidoAlbum .parrafoAlbum, .mainAutor .discFlex div p, .mainAutor aside .sidebar p, .mainAutor aside .sidebarDos p, .mainLong .contenidoLong p {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.1rem;
+  color: gray;
+  line-height: 1.5rem; }
+
+.contenidoAlbum .subtituloDos, .mainLong aside .sidebarLong h3 {
+  text-align: center;
+  font-family: 'IM Fell DW Pica', serif;
+  font-size: 2.3rem;
+  color: gray; }
+
+.contenidoAlbum .contenidoMain, .mainAutor, .mainLong {
+  display: grid;
+  grid-template-columns: 2fr 300px;
+  grid-template-rows: auto auto;
+  margin: 2rem auto;
+  grid-gap: 2rem; }
+
+.contenidoAlbum .contenidoMain aside .sidebar, .mainAutor aside .sidebar, .mainLong aside .sidebarLong {
+  padding: 1.3rem;
+  margin: 1rem;
+  border: solid #e6dcd4 0.5px;
+  border-radius: 5px; }
+
+.contenidoMultimedia .imgMulti1, .contenidoMultimedia .imgMulti2, .contenidoMultimedia .imgMulti3, .contenidoMultimedia .imgMulti4, .contenidoMultimedia .imgMulti5, .contenidoMultimedia .imgMulti6, .contenidoMultimedia .imgMulti7, .contenidoMultimedia .imgMulti8, .contenidoMultimedia .imgMulti9 {
+  grid-gap: 2rem;
+  margin: 1rem auto;
+  width: 80%; }
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0; }
 
 .menu {
   background-color: #c6a992;
@@ -12,366 +58,224 @@
   .menu ul li:hover {
     transform: scale(0.9); }
 
-section h1 {
-  font-family: 'IM Fell DW Pica', serif;
+section p .link {
   color: #c6a992;
-  font-size: 3.6rem;
-  text-align: center;
-  margin-top: 3rem; }
+  text-decoration: none;
+  font-weight: bold; }
 
-section p {
-  text-align: center;
-  font-family: "Open Sans", sans-serif;
-  font-size: 1.1rem;
-  color: gray;
-  line-height: 1.5rem;
-  margin: 2rem; }
+section p .link:hover {
+  color: #635041; }
 
-.contenidoInicio .img {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto;
-  justify-content: center;
-  justify-items: center;
-  align-items: center; }
-  .contenidoInicio .img .imgH {
-    width: 80%;
-    margin: 20px auto; }
-
-.contenidoInicio h2 {
-  text-align: center;
-  font-family: 'IM Fell DW Pica', serif;
-  font-size: 2.7rem;
-  margin: 4rem auto; }
-  .contenidoInicio h2 .link {
-    color: #c6a992;
-    text-decoration: none; }
-  .contenidoInicio h2 .logoSpotify {
-    width: 3%; }
-
-.contenidoInicio h2:hover {
-  transform: scale(0.9); }
-
-.contenidoInicio .flexHome {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  justify-items: center;
-  margin: 4rem; }
-  .contenidoInicio .flexHome p {
-    text-align: center;
-    font-family: "Open Sans", sans-serif;
-    font-size: 1.1rem;
-    color: gray;
-    line-height: 1.5rem;
-    margin: 1rem 6rem; }
-  .contenidoInicio .flexHome .imgPortada {
-    width: 50%; }
-  .contenidoInicio .flexHome .imgPortadaResponsive {
-    display: none; }
+.contenidoInicio {
+  margin: 0 10rem; }
+  .contenidoInicio .img {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    justify-content: center;
+    justify-items: center;
+    align-items: center; }
+    .contenidoInicio .img .imgH {
+      width: 80%;
+      margin: 20px auto; }
+  .contenidoInicio h2 {
+    margin: 4rem auto; }
+    .contenidoInicio h2 .link {
+      color: #c6a992;
+      text-decoration: none; }
+    .contenidoInicio h2 .logoSpotify {
+      width: 3%; }
+  .contenidoInicio h2:hover {
+    transform: scale(0.9); }
+  .contenidoInicio .flexHome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    margin: 4rem 0; }
+    .contenidoInicio .flexHome div p {
+      margin-right: 2rem;
+      margin-bottom: 0; }
+    .contenidoInicio .flexHome div .imgPortada {
+      width: 50%; }
+    .contenidoInicio .flexHome div .imgPortadaResponsive {
+      display: none; }
 
 /*sobre el album*/
-section h1 {
-  font-family: 'IM Fell DW Pica', serif;
-  color: #c6a992;
-  font-size: 3.6rem;
-  text-align: center;
-  margin-top: 3rem; }
-
-section .parrafoAlbum {
-  text-align: center;
-  font-family: "Open Sans", sans-serif;
-  font-size: 1.1rem;
-  color: gray;
-  line-height: 1.5rem;
-  margin: 1.3rem 10rem; }
-
-section .imgAl {
-  margin: 4rem 0rem;
-  text-align: center; }
-  section .imgAl .imgAlbum {
-    width: 70%;
-    margin-bottom: 2rem; }
-
 .contenidoAlbum {
-  display: grid;
-  grid-template-columns: 2fr 300px;
-  grid-template-rows: auto auto auto;
-  margin: 2rem auto;
-  grid-gap: 2rem; }
-  .contenidoAlbum .contenidoMain {
-    margin-left: 5rem; }
-    .contenidoAlbum .contenidoMain p {
-      text-align: center;
-      font-family: "Open Sans", sans-serif;
-      font-size: 1.1rem;
-      color: gray;
-      line-height: 1.5rem; }
-    .contenidoAlbum .contenidoMain .imgAl {
-      margin: 5rem;
-      text-align: center; }
-      .contenidoAlbum .contenidoMain .imgAl .imgAlbum {
-        width: 80%; }
-    .contenidoAlbum .contenidoMain .flexImg {
-      display: flex;
-      justify-content: center;
-      margin: 2.5rem 10rem; }
-      .contenidoAlbum .contenidoMain .flexImg .imgP {
-        width: 50%;
-        margin: 0 2rem; }
-    .contenidoAlbum .contenidoMain h2 {
-      text-align: center;
-      font-family: 'IM Fell DW Pica', serif;
-      font-size: 2.7rem;
-      color: #c6a992;
-      margin: 5rem; }
-    .contenidoAlbum .contenidoMain .subtituloDos {
-      text-align: center;
-      font-family: 'IM Fell DW Pica', serif;
-      font-size: 2.3rem;
-      color: gray; }
-    .contenidoAlbum .contenidoMain .parrafoAlbum {
-      margin: 2rem 8rem; }
-  .contenidoAlbum aside .sidebar {
-    padding: 1.3rem;
-    margin: 1rem;
-    border: solid #ecdbcd 0.5px;
-    border-radius: 4px; }
-    .contenidoAlbum aside .sidebar h2 {
-      text-align: center;
-      font-family: 'IM Fell DW Pica', serif;
-      font-size: 2.7rem;
+  margin: 0 10rem; }
+  .contenidoAlbum .contenidoMain div p {
+    width: 85%;
+    margin: 0 auto; }
+  .contenidoAlbum .contenidoMain div .imgAlDos {
+    text-align: center;
+    margin: 3rem 0; }
+  .contenidoAlbum .contenidoMain div .flexImg {
+    display: flex;
+    justify-content: center;
+    margin: 2.5rem 0rem; }
+    .contenidoAlbum .contenidoMain div .flexImg .imgP {
+      width: 40%;
+      margin: 0 1rem; }
+  .contenidoAlbum .contenidoMain aside {
+    margin: 10rem 0; }
+    .contenidoAlbum .contenidoMain aside .sidebar h2 {
+      color: #635041;
       font-size: 1.5rem;
       margin: 1rem 0; }
-    .contenidoAlbum aside .sidebar .pSidebar {
-      text-align: center;
-      font-family: "Open Sans", sans-serif;
-      font-size: 1.1rem;
-      color: gray;
-      line-height: 1.5rem;
-      color: black;
+    .contenidoAlbum .contenidoMain aside .sidebar .pSidebar {
+      color: #635041;
       font-family: "IM Fell DW Pica", serif;
       margin: 0 auto; }
-  .contenidoAlbum aside .sidebarDos {
-    height: 550px;
-    margin: 1rem; }
+    .contenidoAlbum .contenidoMain aside .sidebarDos {
+      margin: 1rem; }
+  .contenidoAlbum .subtituloUno {
+    color: #c6a992;
+    margin: 5rem 0;
+    border-bottom: solid #c6a992 5px; }
+  .contenidoAlbum .subtituloDos {
+    font-size: 3rem; }
+  .contenidoAlbum .parrafoAlbum {
+    text-align: center;
+    margin: 2rem auto;
+    width: 70%; }
+    .contenidoAlbum .parrafoAlbum span {
+      font-style: italic;
+      color: #635041;
+      font-weight: bold;
+      text-align: center; }
+  .contenidoAlbum .imgAl {
+    text-align: center;
+    margin: 1.5rem 0; }
+    .contenidoAlbum .imgAl .imgAlbum {
+      width: 60%;
+      margin-bottom: 2.5rem; }
 
 /*multimedia*/
-.contenidoMultimedia h1 {
-  font-family: 'IM Fell DW Pica', serif;
-  color: #c6a992;
-  font-size: 3.6rem;
-  text-align: center;
-  margin-top: 3rem; }
-
-.contenidoMultimedia h2 {
-  text-align: center;
-  font-family: 'IM Fell DW Pica', serif;
-  font-size: 2.7rem;
-  color: gray;
-  margin: 2rem 0; }
-
-.contenidoMultimedia .imgMultimedia {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto auto auto;
-  grid-template-areas: "imgMulti1 imgMulti2 imgMulti3" "imgMulti4 imgMulti5 imgMulti6" "imgMulti7 imgMulti8 imgMulti9";
-  justify-content: center;
-  align-items: center; }
-
-.contenidoMultimedia .imgMulti1 {
-  grid-area: imgMulti1;
-  grid-gap: 2rem;
-  margin: 1rem auto;
-  width: 80%; }
-
-.contenidoMultimedia .imgMulti2 {
-  grid-area: imgMulti2;
-  grid-gap: 2rem;
-  margin: 1rem auto;
-  width: 80%; }
-
-.contenidoMultimedia .imgMulti3 {
-  grid-area: imgMulti3;
-  grid-gap: 2rem;
-  margin: 1rem auto;
-  width: 80%; }
-
-.contenidoMultimedia .imgMulti4 {
-  grid-area: imgMulti4;
-  grid-gap: 2rem;
-  margin: 1rem auto;
-  width: 80%; }
-
-.contenidoMultimedia .imgMulti5 {
-  grid-area: imgMulti5;
-  grid-gap: 2rem;
-  margin: 1rem auto;
-  width: 80%; }
-
-.contenidoMultimedia .imgMulti6 {
-  grid-area: imgMulti6;
-  grid-gap: 2rem;
-  margin: 1rem auto;
-  width: 80%; }
-
-.contenidoMultimedia .imgMulti7 {
-  grid-area: imgMulti7;
-  grid-gap: 2rem;
-  margin: 1rem auto;
-  width: 80%; }
-
-.contenidoMultimedia .imgMulti8 {
-  grid-area: imgMulti8;
-  grid-gap: 2rem;
-  margin: 1rem auto;
-  width: 80%; }
-
-.contenidoMultimedia .imgMulti9 {
-  grid-area: imgMulti9;
-  grid-gap: 2rem;
-  margin: 1rem auto;
-  width: 80%; }
+.contenidoMultimedia {
+  margin: 0 10rem; }
+  .contenidoMultimedia h2 {
+    color: gray;
+    margin: 2rem 0; }
+  .contenidoMultimedia .imgMultimedia {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "imgMulti1 imgMulti2 imgMulti3"
+ "imgMulti4 imgMulti5 imgMulti6"
+ "imgMulti7 imgMulti8 imgMulti9";
+    justify-content: center;
+    align-items: center; }
+  .contenidoMultimedia .imgMulti1 {
+    grid-area: imgMulti1; }
+  .contenidoMultimedia .imgMulti2 {
+    grid-area: imgMulti2; }
+  .contenidoMultimedia .imgMulti3 {
+    grid-area: imgMulti3; }
+  .contenidoMultimedia .imgMulti4 {
+    grid-area: imgMulti4; }
+  .contenidoMultimedia .imgMulti5 {
+    grid-area: imgMulti5; }
+  .contenidoMultimedia .imgMulti6 {
+    grid-area: imgMulti6; }
+  .contenidoMultimedia .imgMulti7 {
+    grid-area: imgMulti7; }
+  .contenidoMultimedia .imgMulti8 {
+    grid-area: imgMulti8; }
+  .contenidoMultimedia .imgMulti9 {
+    grid-area: imgMulti9; }
 
 /*sobre el autor*/
-section h1 {
-  font-family: 'IM Fell DW Pica', serif;
-  color: #c6a992;
-  font-size: 3.6rem;
-  text-align: center;
-  margin-top: 3rem; }
-
 section p {
-  text-align: center;
-  font-family: "Open Sans", sans-serif;
-  font-size: 1.1rem;
-  color: gray;
-  line-height: 1.5rem;
   margin: 2.5rem 10rem; }
 
 .mainAutor {
-  display: grid;
-  grid-template-columns: 2fr 300px;
-  grid-template-rows: auto auto auto;
-  margin: 2rem auto;
-  grid-gap: 2rem; }
+  margin: 0 10rem; }
   .mainAutor h2 {
-    text-align: center;
-    font-family: 'IM Fell DW Pica', serif;
-    font-size: 2.7rem;
     color: gray; }
   .mainAutor .discFlex {
     display: flex;
     justify-content: center;
-    margin: 3rem 0 3rem 6rem; }
+    margin: 3rem 0; }
     .mainAutor .discFlex .imgDisc {
       width: 40%;
       margin: 1rem auto; }
     .mainAutor .discFlex .imgDiscResponsive {
       display: none; }
-    .mainAutor .discFlex div p {
-      text-align: center;
-      font-family: "Open Sans", sans-serif;
-      font-size: 1.1rem;
-      color: gray;
-      line-height: 1.5rem;
-      margin: 0 2.5rem;
-      justify-content: center; }
-      .mainAutor .discFlex div p .link {
-        text-decoration: none;
-        color: gray;
-        font-weight: bold; }
-      .mainAutor .discFlex div p .link:hover {
-        color: #3f3f3f; }
-    .mainAutor .discFlex div .tituloAl {
-      font-family: 'Antonio', sans-serif;
-      text-align: center;
-      font-size: 2.5rem;
-      margin: 2rem auto;
-      color: #c6a992; }
-      .mainAutor .discFlex div .tituloAl .logoSpotify {
-        width: 7%; }
-    .mainAutor .discFlex div .logoSpotify:hover {
-      transform: scale(0.9); }
-  .mainAutor .sidebar {
-    padding: 1.3rem;
-    margin: 1rem;
-    border: solid #ecdbcd 0.5px;
-    border-radius: 4px; }
-    .mainAutor .sidebar .imgPortrato {
-      width: 40%;
-      display: block;
-      margin: 0.5rem auto; }
-    .mainAutor .sidebar h2 {
-      text-align: center;
-      font-family: 'IM Fell DW Pica', serif;
-      font-size: 2.7rem;
-      color: #585757;
-      font-size: 1.5rem;
-      margin: 0 auto;
-      font-family: "IM Fell DW Pica", serif; }
-    .mainAutor .sidebar p {
-      text-align: center;
-      font-family: "Open Sans", sans-serif;
-      font-size: 1.1rem;
-      color: gray;
-      line-height: 1.5rem;
-      color: black;
+    .mainAutor .discFlex div {
+      margin: 2rem 2.5rem; }
+      .mainAutor .discFlex div p {
+        justify-content: center;
+        margin: 2rem 0; }
+        .mainAutor .discFlex div p .link {
+          text-decoration: none;
+          color: gray;
+          font-weight: bold; }
+        .mainAutor .discFlex div p .link:hover {
+          color: #3f3f3f; }
+      .mainAutor .discFlex div .tituloAl {
+        font-family: 'Antonio', sans-serif;
+        text-align: center;
+        font-size: 2.3rem;
+        color: #c6a992; }
+        .mainAutor .discFlex div .tituloAl .logoSpotify {
+          width: 7%; }
+      .mainAutor .discFlex div .logoSpotify:hover {
+        transform: scale(0.9); }
+  .mainAutor aside .sidebar .imgPortrato {
+    width: 40%;
+    display: block;
+    margin: 0.5rem auto; }
+  .mainAutor aside .sidebar h2 {
+    color: #635041;
+    font-size: 1.5rem;
+    margin: 0 auto;
+    font-family: "IM Fell DW Pica", serif; }
+  .mainAutor aside .sidebar p {
+    color: #635041;
+    font-family: "IM Fell DW Pica", serif;
+    margin: 0 auto;
+    margin-bottom: 1rem; }
+  .mainAutor aside .sidebar .imgSide {
+    width: 85%;
+    display: block;
+    margin: 0.5rem auto; }
+  .mainAutor aside .sidebarDos {
+    margin: 1rem; }
+    .mainAutor aside .sidebarDos p {
+      color: #635041;
       font-family: "IM Fell DW Pica", serif;
       margin: 0 auto;
-      margin-bottom: 1rem; }
-    .mainAutor .sidebar .imgSide {
-      width: 85%;
-      display: block;
-      margin: 0.5rem auto; }
+      font-size: 1.6rem;
+      margin: 3rem 0 1.5rem 0;
+      border-bottom: solid #c6a992 8px;
+      border-bottom-width: 2px; }
 
 /*long pond studio*/
-section h1 {
-  font-family: 'IM Fell DW Pica', serif;
-  color: #c6a992;
-  font-size: 3.6rem;
-  text-align: center;
-  margin-top: 3rem;
-  margin: 4.5rem 10rem; }
-
 .mainLong {
-  display: grid;
-  grid-template-columns: 2fr 300px;
-  grid-template-rows: auto auto auto;
-  margin: 2rem auto;
-  grid-gap: 2rem; }
-  .mainLong .contenidoLong p {
-    text-align: center;
-    font-family: "Open Sans", sans-serif;
-    font-size: 1.1rem;
-    color: gray;
-    line-height: 1.5rem;
-    margin: 0rem 5rem; }
+  margin: 0 10rem; }
   .mainLong .contenidoLong .imgLong {
     display: block;
     margin: 2rem auto;
-    text-align: center; }
-    .mainLong .contenidoLong .imgLong .imgLP {
-      width: 40%; }
-  .mainLong aside .sidebarLong {
-    padding: 1.3rem;
-    margin-right: 3rem;
-    border: solid #e6dcd4 0.5px;
-    border-radius: 3px; }
+    text-align: center;
+    width: 50%; }
+  .mainLong .contenidoLong .imgLongDos {
+    display: block;
+    margin: 2rem auto;
+    text-align: center;
+    width: 70%; }
+  .mainLong aside {
+    margin: 10rem 0; }
     .mainLong aside .sidebarLong .imgSideLong {
       width: 90%;
       display: block;
       margin: 1.5rem auto; }
     .mainLong aside .sidebarLong h3 {
-      text-align: center;
-      font-family: 'IM Fell DW Pica', serif;
-      font-size: 2.3rem;
-      color: gray;
       font-size: 1.2rem; }
       .mainLong aside .sidebarLong h3 .link {
         font-family: "IM Fell DW Pica", serif;
         text-decoration: none;
-        color: gray; }
+        color: #c6a992; }
     .mainLong aside .sidebarLong h3:hover {
       transform: scale(0.9); }
 
@@ -384,74 +288,86 @@ section h1 {
     section p {
       font-size: 1.3rem;
       margin: 2rem; }
-  .contenidoInicio .img {
-    display: block;
-    margin: 1rem auto; }
-    .contenidoInicio .img .imgH {
-      width: 80%;
-      display: block; }
-  .contenidoInicio h2 .logoSpotify {
-    width: 10%; }
-  .contenidoInicio .flexHome {
-    display: block;
-    margin: 0 auto; }
-    .contenidoInicio .flexHome p {
-      font-size: 1.3rem;
-      margin: 2rem; }
-    .contenidoInicio .flexHome .imgPortadaResponsive {
+  .contenidoInicio {
+    margin: 1rem 2rem; }
+    .contenidoInicio .img {
       display: block;
-      width: 80%;
-      margin: 2.3rem auto; }
-    .contenidoInicio .flexHome .imgPortada {
-      display: none; }
+      margin: 1rem auto; }
+      .contenidoInicio .img .imgH {
+        width: 80%;
+        display: block; }
+    .contenidoInicio h2 .logoSpotify {
+      width: 10%; }
+    .contenidoInicio .flexHome {
+      display: block; }
+      .contenidoInicio .flexHome div p {
+        font-size: 1.3rem;
+        margin: 0 auto;
+        text-align: left; }
+      .contenidoInicio .flexHome div .imgPortadaResponsive {
+        display: block;
+        width: 80%;
+        margin: 2.3rem auto; }
+      .contenidoInicio .flexHome .imgPortada {
+        display: none; }
   /*sobre el album*/
   .contenidoAlbum {
     display: block;
     margin: 0 auto; }
     .contenidoAlbum .contenidoMain {
+      display: block;
       margin: 2rem; }
-      .contenidoAlbum .contenidoMain .parAlbum {
+      .contenidoAlbum .contenidoMain div .parAlbum {
         margin: 1rem auto;
         font-size: 1.3rem; }
-      .contenidoAlbum .contenidoMain .imgAl {
-        margin: 0; }
-        .contenidoAlbum .contenidoMain .imgAl .imgTexto {
+      .contenidoAlbum .contenidoMain div .imgAlDos {
+        margin: 1.5rem auto; }
+        .contenidoAlbum .contenidoMain div .imgAlDos .imgTexto {
           width: 90%;
           margin: 0 auto; }
-        .contenidoAlbum .contenidoMain .imgAl .imgAlbum {
-          width: 98%;
-          margin-bottom: 1rem; }
+      .contenidoAlbum .contenidoMain div .flexImg {
+        display: block;
+        margin: 0 auto; }
+        .contenidoAlbum .contenidoMain div .flexImg .imgP {
+          width: 95%;
+          margin: 1rem 0; }
+      .contenidoAlbum .contenidoMain aside {
+        display: none; }
       .contenidoAlbum .contenidoMain .flexImg {
         display: block;
         margin: 0 auto; }
         .contenidoAlbum .contenidoMain .flexImg .imgP {
           width: 95%;
           margin: 1rem 0; }
-      .contenidoAlbum .contenidoMain h2 {
-        border-bottom: solid #c6a992 5px;
-        margin: 2rem; }
-      .contenidoAlbum .contenidoMain .subtituloDos {
-        font-size: 2.2rem; }
-      .contenidoAlbum .contenidoMain .parrafoAlbum {
-        margin: 2rem; }
-  aside {
-    display: none; }
+    .contenidoAlbum h2 {
+      border-bottom: solid #c6a992 5px;
+      margin: 2rem; }
+    .contenidoAlbum .subtituloDos {
+      font-size: 2.2rem; }
+    .contenidoAlbum .parrafoAlbum {
+      margin: 2rem auto; }
+    .contenidoAlbum .imgAl {
+      margin: 1rem; }
+      .contenidoAlbum .imgAl .imgAlbum {
+        width: 98%; }
   /*multimedia*/
-  .contenidoMultimedia h1 {
-    font-size: 2.8rem;
-    margin: 1rem; }
-  .contenidoMultimedia h2 {
-    font-size: 2.4rem; }
-  .contenidoMultimedia .imgMultimedia {
-    display: block;
-    margin: 0 auto;
-    text-align: center; }
+  .contenidoMultimedia {
+    margin: 0 auto; }
+    .contenidoMultimedia h1 {
+      font-size: 2.8rem;
+      margin: 1rem; }
+    .contenidoMultimedia h2 {
+      font-size: 2.4rem; }
+    .contenidoMultimedia .imgMultimedia {
+      display: block;
+      margin: 0 auto;
+      text-align: center; }
   /*sobre el autor*/
   section {
     margin: 1rem 0; }
     section p {
-      margin: 0;
-      padding: 0 4rem; }
+      margin: 0 1rem;
+      padding: 0; }
   .mainAutor {
     display: block;
     margin: 0; }
@@ -461,95 +377,117 @@ section h1 {
       .mainAutor .discFlex .imgDisc {
         display: none; }
       .mainAutor .discFlex .imgDiscResponsive {
-        width: 50%;
+        width: 80%;
         display: block;
         margin: 1rem auto;
-        margin-bottom: 4rem; }
-      .mainAutor .discFlex div p {
-        margin: 0;
-        font-size: 1.3rem;
-        padding: 0 4rem; }
-      .mainAutor .discFlex div .tituloAl {
-        font-size: 2rem;
-        margin-bottom: 1.3rem; }
-  .sidebar {
-    display: none; }
+        margin-bottom: 3rem; }
+      .mainAutor .discFlex div {
+        margin: 1rem; }
+        .mainAutor .discFlex div p {
+          margin: 0;
+          font-size: 1.3rem;
+          padding: 0 1rem;
+          text-align: left; }
+        .mainAutor .discFlex div .tituloAl {
+          font-size: 2rem;
+          margin-bottom: 1.3rem; }
+    .mainAutor aside .sidebar {
+      display: none; }
+    .mainAutor aside .sidebarDos {
+      margin: 1rem auto; }
+  /*long pond sessions*/
   .mainLong {
-    display: block; }
+    display: block;
+    margin: 1rem auto; }
+    .mainLong .contenidoLong h1 {
+      margin: 2rem 3rem;
+      font-size: 3.2rem; }
     .mainLong .contenidoLong p {
-      margin: 1rem auto;
+      margin: 0 auto;
       font-size: 1.3rem;
-      padding: 2rem; }
-    .mainLong .contenidoLong .imgLong .imgLP {
-      width: 80%; } }
+      padding: 2rem;
+      text-align: left; }
+    .mainLong .contenidoLong .imgLong {
+      width: 90%; } }
 
 @media screen and (min-width: 769px) and (max-width: 1000px) {
-  section h1 {
-    font-size: 3rem; }
-  section p {
-    font-size: 1.3rem; }
-  .contenidoInicio .img {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: 1fr 1fr;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-    grid-gap: 1rem; }
-    .contenidoInicio .img .imgH {
-      width: 80%; }
-  .flexHome p {
-    font-size: 1.3rem; }
-  .flexHome .imgPortadaResponsive {
-    margin: 2.3rem auto;
-    display: block; }
-  .flexHome .imgPortada {
-    display: none; }
+  section {
+    margin: 1rem 2rem; }
+    section h1 {
+      font-size: 3.4rem; }
+    section p {
+      font-size: 1.3rem;
+      margin: 2rem; }
+  .contenidoInicio {
+    margin: 1rem 2rem; }
+    .contenidoInicio .img {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-template-rows: 1fr 1fr;
+      justify-content: center;
+      justify-items: center;
+      align-items: center;
+      grid-gap: 1rem; }
+      .contenidoInicio .img .imgH {
+        width: 80%; }
+    .contenidoInicio .flexHome {
+      display: block;
+      margin: 0 2rem; }
+      .contenidoInicio .flexHome div p {
+        font-size: 1.3rem;
+        margin: 0 auto;
+        text-align: left; }
+      .contenidoInicio .flexHome div .imgPortadaResponsive {
+        display: block;
+        width: 80%;
+        margin: 2.3rem auto; }
+      .contenidoInicio .flexHome .imgPortada {
+        display: none; }
   /*sobre el album*/
   section h1 {
     margin: 2rem; }
   .contenidoAlbum {
-    display: block;
     margin: 0 auto; }
     .contenidoAlbum .contenidoMain {
-      margin: 0 2rem; }
-      .contenidoAlbum .contenidoMain .parAlbum {
-        margin: 2rem;
-        font-size: 1.3rem; }
-      .contenidoAlbum .contenidoMain .imgAl {
+      display: block; }
+      .contenidoAlbum .contenidoMain div .imgAlDos {
         margin: 1.3rem; }
-        .contenidoAlbum .contenidoMain .imgAl .imgTexto {
-          width: 90%;
+        .contenidoAlbum .contenidoMain div .imgAlDos .imgTexto {
+          width: 70%;
           margin: 0 auto; }
-        .contenidoAlbum .contenidoMain .imgAl .imgAlbum {
-          width: 98%;
-          margin-bottom: 1rem; }
-      .contenidoAlbum .contenidoMain .flexImg {
+      .contenidoAlbum .contenidoMain div .flexImg {
         display: block;
         margin: 0 auto; }
-        .contenidoAlbum .contenidoMain .flexImg .imgP {
+        .contenidoAlbum .contenidoMain div .flexImg .imgP {
           width: 70%;
           margin: 1rem auto;
           display: block; }
-      .contenidoAlbum .contenidoMain h2 {
-        border-bottom: solid #c6a992 5px;
-        margin: 2rem; }
-      .contenidoAlbum .contenidoMain .subtituloDos {
-        font-size: 2.5rem; }
-      .contenidoAlbum .contenidoMain .parrafoAlbum {
-        margin: 2rem;
-        font-size: 1.3rem; }
+      .contenidoAlbum .contenidoMain aside {
+        display: none; }
+    .contenidoAlbum h2 {
+      border-bottom: solid #c6a992 5px;
+      margin: 2rem; }
+    .contenidoAlbum .subtituloDos {
+      font-size: 2.5rem; }
+    .contenidoAlbum .parrafoAlbum {
+      margin: 2rem auto;
+      font-size: 1.3rem; }
+    .contenidoAlbum .imgAlbum {
+      width: 98%;
+      margin-bottom: 1rem; }
   /*multimedia*/
-  .contenidoMultimedia h1 {
-    font-size: 2.8rem;
-    margin: 1rem; }
-  .contenidoMultimedia h2 {
-    font-size: 2.4rem; }
-  .contenidoMultimedia .imgMultimedia {
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-    width: 70%; }
+  .contenidoMultimedia {
+    margin: 0 auto; }
+    .contenidoMultimedia h1 {
+      font-size: 2.8rem;
+      margin: 1rem; }
+    .contenidoMultimedia h2 {
+      font-size: 2.4rem; }
+    .contenidoMultimedia .imgMultimedia {
+      display: block;
+      margin: 0 auto;
+      text-align: center;
+      width: 70%; }
   /*sobre el autor*/
   .mainAutor {
     display: block;
@@ -571,63 +509,96 @@ section h1 {
       .mainAutor .discFlex div .tituloAl {
         font-size: 3rem;
         margin-bottom: 1.3rem; }
+    .mainAutor aside {
+      margin: 0 auto; }
+      .mainAutor aside .sidebar {
+        display: none; }
+      .mainAutor aside .sidebarDos {
+        display: block;
+        margin: 1rem auto; }
+  /*long pond sessions*/
   .mainLong {
-    display: block; }
+    display: block;
+    margin: 0 auto; }
     .mainLong .contenidoLong p {
       margin: 1rem auto;
       font-size: 1.3rem;
       padding: 2rem; }
-    .mainLong .contenidoLong .imgLong .imgLP {
-      width: 80%; }
-    .mainLong aside .sidebarLong {
-      border: none;
-      width: 50%;
-      margin: auto; }
-      .mainLong aside .sidebarLong h3 {
-        font-size: 1.8rem; }
-  aside .sidebar {
-    display: none; }
-  aside .sidebarDos {
-    display: none; } }
+    .mainLong aside {
+      margin: 1rem; }
+      .mainLong aside .sidebarLong {
+        border: none;
+        width: 50%;
+        margin: 0 auto; }
+        .mainLong aside .sidebarLong .imgSideLong {
+          width: 70%; }
+        .mainLong aside .sidebarLong h3 {
+          font-size: 1.8rem; } }
 
-@media screen and (min-width: 1001px) and (max-width: 1200px) {
+@media screen and (min-width: 1001px) and (max-width: 1350px) {
+  section {
+    margin: 1rem 3rem; }
+  .contenidoInicio {
+    margin: 1rem 3rem; }
+    .contenidoInicio .flexHome .imgPortada {
+      width: 40%; }
   /*sobre el album*/
-  .contenidoAlbum .contenidoMain .imgAl {
-    margin: 2rem; }
-    .contenidoAlbum .contenidoMain .imgAl .imgAlbum {
-      width: 100%; }
-  .contenidoAlbum .contenidoMain .flexImg {
-    margin: 2rem auto; }
-    .contenidoAlbum .contenidoMain .flexImg .Imgp {
-      width: 100%;
-      margin: 0; }
-  .contenidoAlbum .contenidoMain h2 {
-    margin-top: 2.5rem;
-    margin-bottom: 0; }
-  .contenidoAlbum .contenidoMain .parrafoAlbum {
-    margin: 2rem 0; }
+  .contenidoAlbum {
+    margin: 1rem 3rem; }
+    .contenidoAlbum .contenidoMain .imgAl {
+      margin: 2rem; }
+      .contenidoAlbum .contenidoMain .imgAl .imgAlbum {
+        width: 100%; }
+    .contenidoAlbum .contenidoMain .flexImg {
+      margin: 2rem auto; }
+      .contenidoAlbum .contenidoMain .flexImg .Imgp {
+        width: 100%;
+        margin: 0; }
+    .contenidoAlbum .contenidoMain h2 {
+      margin-top: 2.5rem;
+      margin-bottom: 0; }
+    .contenidoAlbum .contenidoMain .parrafoAlbum {
+      margin: 2rem 0; }
+  /*multimedia*/
+  .contenidoMultimedia {
+    margin: 1rem 3rem; }
   /*sobre el autor*/
   .mainAutor {
-    grid-template-columns: 2fr 200px;
-    grid-gap: 0; }
+    margin: 0 3rem; }
     .mainAutor div .discFlex {
-      margin: 3rem 1rem; }
-      .mainAutor div .discFlex div .pDisc {
-        margin: 0 1rem; }
-    .mainAutor aside .sidebar {
-      padding: 0;
-      margin: 1rem; }
-      .mainAutor aside .sidebar .imgPortrato {
-        width: 70%; }
-      .mainAutor aside .sidebar h2 {
-        font-size: 1.2rem; }
-      .mainAutor aside .sidebar .imgSide {
-        width: 90%; }
+      display: block;
+      margin: 0 auto; }
+      .mainAutor div .discFlex .imgDisc {
+        display: none; }
+      .mainAutor div .discFlex .imgDiscResponsive {
+        width: 60%;
+        display: block;
+        margin: 1rem auto;
+        margin-bottom: 3rem; }
+      .mainAutor div .discFlex div {
+        margin: 1rem 0.5rem; }
+        .mainAutor div .discFlex div .pDisc {
+          margin: 0 1rem; }
+    .mainAutor aside {
+      margin-left: 1rem; }
+      .mainAutor aside .sidebar {
+        padding: 0;
+        margin: 0; }
+        .mainAutor aside .sidebar .imgPortrato {
+          width: 70%; }
+        .mainAutor aside .sidebar h2 {
+          font-size: 1.2rem; }
+        .mainAutor aside .sidebar .imgSide {
+          width: 90%; }
+      .mainAutor aside .sidebarDos {
+        margin: 0; }
   /*long pond*/
-  .mainLong .contenidoLong p {
-    margin: 1rem; }
-  .mainLong .contenidoLong .imgLong .imgLP {
-    width: 70%; } }
+  .mainLong {
+    margin: 0 3rem; }
+    .mainLong .contenidoLong p {
+      margin: 1rem; }
+    .mainLong .contenidoLong .imgLong {
+      width: 80%; } }
 
 footer h3 {
   background-color: #c6a992;
